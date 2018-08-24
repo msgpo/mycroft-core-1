@@ -22,6 +22,4 @@ override_dh_builddeb:
 	cd ..; ls *.deb | xargs zsyncmake
 
 override_dh_strip:
-	# Do not create debug package. Due to virtenv and python package stuff this
-	# will fail on all architectures on one or more of the bundled libs.
-	dh_strip --no-automatic-dbgsym
+	@echo "Not stripping. Stripping breaks on virtenv stuff."
