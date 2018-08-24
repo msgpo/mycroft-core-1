@@ -1,0 +1,5 @@
+
+version=4
+https://github.com/MycroftAI/mimic/releases .*/(\d\S+)\.tar\.gz
+
+#https://github.com/MycroftAI/mimic/archive/@ANY_VERSION@@ARCHIVE_EXT@

@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+
+%:
+	dh ${@}
+
+override_dh_auto_build:
+	bash x.sh
+
+override_dh_auto_install:
+	mkdir -pv debian/mycroft-core/opt/
+	mv -v /opt/mycroft debian/mycroft-core/opt/
+
+override_dh_fixperms:
+	dh_fixperms
+	chown -R --no-dereference 1000:1000 debian/mycroft-core/opt/mycroft
+	chown -R --no-dereference 1000:1000 debian/mycroft-core/var/log/mycroft
+
+override_dh_builddeb:
+	dh_builddeb
+	cd ..; ls *.deb | xargs zsyncmake

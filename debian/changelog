@@ -1,0 +1,5 @@
+mycroft-core (1.2.0.2) bionic; urgency=medium
+
+  * Hacky build for phone
+
+ -- Harald Sitter <sitter@kde.org>  Fri, 24 Aug 2018 10:07:45 +0200

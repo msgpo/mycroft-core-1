@@ -1,0 +1,26 @@
+Source: mycroft-core
+Section: misc
+Priority: optional
+Maintainer: Nobody <nobody@nowhere.tld>
+Build-Depends: debhelper (>= 9), libdbus-1-dev, pxz, zsync
+Standards-Version: 3.9.3
+
+Package: mycroft-core
+Architecture: any
+Depends: flac,
+         git,
+         jq,
+         libfann2,
+         libjack0,
+         libjq1,
+         libonig4,
+         libout123-0,
+         libportaudio2,
+         libportaudiocpp0,
+         mpg123,
+         python3-arrow,
+         python3-dev,
+         ${misc:Depends},
+         ${shlib:Depends}
+Description: it mycroft-cores
+ mycroft-cores stuff
