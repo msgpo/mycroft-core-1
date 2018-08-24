@@ -23,3 +23,11 @@ override_dh_builddeb:
 
 override_dh_strip:
 	@echo "Not stripping. Stripping breaks on virtenv stuff."
+
+override_dh_shlibdeps:
+	@echo "Not generating shlibdeps"
+	# TODO: we probably could get this and maybe also stripping to work if we
+	# dropped foreign libs out of the package during installation.
+	# Notably:
+	# speech_recognition/flac-linux-x86
+	# speech_recognition/flac-linux-x86_64
