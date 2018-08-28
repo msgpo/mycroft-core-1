@@ -7,7 +7,7 @@ set -ex
 chown -Rv phablet /opt/mycroft || true
 chown -Rv phablet /var/log/mycroft || true
 
-if [ -e /home/phablet ]; do
+if [ -e /home/phablet ]; then
   ln -s /opt/mycroft /home/phablet/mycroft-core
 fi
 
