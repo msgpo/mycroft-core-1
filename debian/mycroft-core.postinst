@@ -4,11 +4,11 @@ set -ex
 
 . /usr/share/debconf/confmodule
 
-chown -Rv phablet /opt/mycroft-core || true
+chown -Rv phablet /opt/mycroft || true
 chown -Rv phablet /var/log/mycroft || true
 
 if [ -e /home/phablet ]; then
-  ln -s /opt/mycroft-core /home/phablet/mycroft-core
+  ln -s /opt/mycroft /home/phablet/mycroft-core
 fi
 
 # dh_installdeb will replace this with shell code automatically
