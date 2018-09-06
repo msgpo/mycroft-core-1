@@ -18,7 +18,7 @@ bash dev_setup.sh --allow-root
 # work when the plasmoid starts it. Instead we'll chown elsewhere.
 rm scripts/prepare-msm.sh
 ln -s /bin/true scripts/prepare-msm.sh
-cp /opt/mycroft/mycroft/skills/__main__.py /opt/mycroft/Mycroft/skills/main.py
+cp mycroft/skills/__main__.py mycroft/skills/main.py
 mkdir skills
 
 find -iname *.o | xargs rm -v
