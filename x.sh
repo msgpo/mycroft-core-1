@@ -7,10 +7,10 @@ set -ex
 
 [ -e /opt ] || mkdir /opt
 cd /opt
-rm -rf mycroft-core
-git clone --depth=1 https://github.com/MycroftAI/mycroft-core.git mycroft-core
+rm -rf mycroft
+git clone --depth=1 https://github.com/MycroftAI/mycroft-core.git mycroft
 
-cd mycroft-core
+cd mycroft
 
 bash dev_setup.sh --allow-root
 
