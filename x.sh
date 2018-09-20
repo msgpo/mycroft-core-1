@@ -32,7 +32,6 @@ cd ..
 
 source .venv/bin/activate
 msm default || true # install default skills
-msm install https://github.com/AIIX/food-wizard
 
 # cd ..
 # tar -cf mycroft-core.tar mycroft-core
