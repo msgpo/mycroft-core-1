@@ -12,6 +12,7 @@ git clone --depth=1 --branch=dev https://github.com/MycroftAI/mycroft-core.git m
 
 cd mycroft
 
+export TERM=xterm
 bash dev_setup.sh --allow-root
 
 # This chowns and crap via sudo. Utterly useless for us because sudo will not
