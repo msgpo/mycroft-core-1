@@ -27,7 +27,6 @@ find -iname *.o | xargs rm -v
 find -iname *.lo | xargs rm -v
 find -iname *.c | xargs rm -v
 find -iname *.h | xargs rm -v
-find -iname .git | xargs rm -rv
 cd mimic
 find -iname .libs | xargs rm -rv
 cd ..

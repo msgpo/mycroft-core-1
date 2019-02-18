@@ -12,6 +12,11 @@ override_dh_auto_install:
 	mkdir -pv debian/mycroft-core/opt/
 	mv -v /opt/mycroft debian/mycroft-core/opt/
 
+override_dh_clean:
+	# Don't exclude .git it's required for the core to actually function
+	# properly.
+	dh_clean --exclude=.git
+
 override_dh_fixperms:
 	dh_fixperms
 	chown -R --no-dereference 1000:1000 debian/mycroft-core/opt/mycroft
